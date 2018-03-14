@@ -19,7 +19,6 @@ services:
       TOMCAT_SERVER_ID: tomcat_server_001
     restart: always
   tomcat-002:
-    build: ./tomcat
     image: jason-tomcat:0.0.1
     ports: 
       - "8082:8080"
