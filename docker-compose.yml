@@ -1,0 +1,29 @@
+version: '3.4'
+services:
+  nginx-001:
+    build: ./nginx 
+    image: jason-nginx:0.0.1
+    links: 
+      - tomcat-001:t01 
+      - tomcat-002:t02
+    ports: 
+      - "80:80"
+      - "443:443" 
+    restart: always 
+  tomcat-001:
+    build: ./tomcat
+    image: jason-tomcat:0.0.1
+    ports: 
+      - "8081:8080"
+    environment:
+      TOMCAT_SERVER_ID: tomcat_server_001
+    restart: always
+  tomcat-002:
+    build: ./tomcat
+    image: jason-tomcat:0.0.1
+    ports: 
+      - "8082:8080"
+    environment:
+      TOMCAT_SERVER_ID: tomcat_server_002
+    restart: always
+    
