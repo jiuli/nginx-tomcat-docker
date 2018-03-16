@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>nginx-tomcat-app</name>
+	<name>nginx-tomcat-docker</name>
 	<comment></comment>
 	<projects>
 	</projects>
